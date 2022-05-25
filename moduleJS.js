@@ -21,8 +21,8 @@ const add = (x, y) => x + y
 // sleep(5000).then(() => { console.log('Выполнилось через 5 секунд!'); 
 // });
 
-function myFunction(a = 2,b = 3) {
-    console.log(a + b);
-} 
-const sleep = (ms) => {setTimeout(myFunction, ms)};
-sleep(5000);
+function sleep(ms) {
+    return new Promise (resolve => resolve(setTimeout, ms))
+}
+sleep(5000).then(() => { console.log('Выполнилось через 5 секунд!');
+});
